@@ -79,10 +79,10 @@ const [snackbarSeverity, setSnackbarSeverity] = useState('success');
       const result = await response.json();
 
       if (result.success) {
-        setSnackbarMessage('Message sent successfully');
+        setSnackbarMessage('Contact form submitted successfully!');
         setSnackbarSeverity('success');
       } else {
-        setSnackbarMessage('Failed to send message');
+        setSnackbarMessage('Failed to submit form!');
         setSnackbarSeverity('error');
       }
     } catch (error) {
