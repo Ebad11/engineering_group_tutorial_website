@@ -32,7 +32,7 @@ export async function POST(req) {
       emailText += `\n${subjectLabel}: ${subject.map(sub => sub.title).join(', ')}`;
       emailHtml += `<p><strong>${subjectLabel}:</strong> ${subject.map(sub => sub.title).join(', ')}</p>`;
     }
-
+   
     // Send the email
     await transporter.sendMail({
       from: process.env.EMAIL_USER,
