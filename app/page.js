@@ -4,20 +4,13 @@ import Navbar from "@/components/Navbar";
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import Head from "next/head";
 
+
 export default function Home() {
   return (
     <>
     <Head>
-        <title>Engineering Group Tutorial | EGT</title> {/* Page title */}
-        <meta name="description" content="Empowering engineers through knowledge and innovation. Discover various engineering programs and software training opportunities." />
-        <meta name="keywords" content="Engineering, Education, Innovation, Training, Programs" />
-        <meta name="author" content="Engineering Group Tutorial" />
-        <meta property="og:title" content="Engineering Group Tutorial | EGT" />
-        <meta property="og:description" content="Empowering engineers through knowledge and innovation. Discover various engineering programs and software training opportunities." />
-        <meta property="og:image" content="/path-to-your-image.jpg" />
-        <meta property="og:url" content="https://egtw.vercel.app" />
-        <meta property="og:type" content="website" />
-        {/* Add other meta tags as needed */}
+        <title>An Organization For Engineers | EGT</title>
+        <meta name="description" content="Empowering engineers through knowledge and innovation. Join our platform to excel in the field of engineering." />
       </Head>
       <div className="h-[560px] bg-hero bg-cover w-full">
 
