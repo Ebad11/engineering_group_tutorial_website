@@ -4,14 +4,13 @@ import Navbar from "@/components/Navbar";
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import Head from "next/head";
 
-
+export const metadata = {
+  title: "An Organization For Engineers | EGT",
+  description: "Empowering engineers through knowledge and innovation. Join our platform to excel in the field of engineering.",
+};
 export default function Home() {
   return (
     <>
-    <Head>
-        <title>An Organization For Engineers | EGT</title>
-        <meta name="description" content="Empowering engineers through knowledge and innovation. Join our platform to excel in the field of engineering." />
-      </Head>
       <div className="h-[560px] bg-hero bg-cover w-full">
 
         <div className="container mx-auto p-4 flex flex-col justify-center h-full ">
