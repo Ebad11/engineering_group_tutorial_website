@@ -1,7 +1,7 @@
 "use client"
 import ContactForm from '@/components/forms/ContactForm';
 import { useParams } from 'next/navigation';
-import React from 'react'
+import React, { useEffect } from 'react'
 
 
 
