@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import Head from "next/head";
+
 
 export const metadata = {
   title: "An Organization For Engineers | EGT",
