@@ -8,9 +8,13 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        'hero': "url('/assets/bg.png')",
+      },
+      fontFamily: {
+        poppins: ['Poppins', 'sans-serif'],
+        playfair: ['Playfair Display', 'serif'],
+        playfairSC: ['Playfair Display SC', 'serif'],
+        merriweather: ['Merriweather', 'serif'],
       },
     },
   },
