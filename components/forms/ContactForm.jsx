@@ -1,7 +1,7 @@
 "use client"
-import { Autocomplete, Button, TextField } from '@mui/material';
+import { Alert, Autocomplete, Button, Snackbar, TextField } from '@mui/material';
 import { MuiTelInput } from 'mui-tel-input';
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Controller, useForm, useWatch } from 'react-hook-form';
 
 
@@ -34,6 +34,7 @@ const subjectOptions = [
 ];
 
 
+
 const ContactForm = ({ course }) => {
 
   const { control, handleSubmit, formState: { errors }, setValue } = useForm({
@@ -44,6 +45,11 @@ const ContactForm = ({ course }) => {
       subject: []
     }
   });
+
+  
+const [snackbarOpen, setSnackbarOpen] = useState(false);
+const [snackbarMessage, setSnackbarMessage] = useState('');
+const [snackbarSeverity, setSnackbarSeverity] = useState('success');
 
   // Watch the selected courses
   const selectedCourses = useWatch({ control, name: 'courses' });
@@ -73,14 +79,23 @@ const ContactForm = ({ course }) => {
       const result = await response.json();
 
       if (result.success) {
-        alert('Message sent successfully');
+        setSnackbarMessage('Message sent successfully');
+        setSnackbarSeverity('success');
       } else {
-        alert('Failed to send message');
+        setSnackbarMessage('Failed to send message');
+        setSnackbarSeverity('error');
       }
     } catch (error) {
       console.error('Error submitting form:', error);
-      alert('An error occurred while submitting the form');
+      setSnackbarMessage('An error occurred while submitting the form');
+      setSnackbarSeverity('error');
+    } finally {
+      setSnackbarOpen(true);
     }
+  };
+
+  const handleCloseSnackbar = () => {
+    setSnackbarOpen(false);
   };
 
   return (
@@ -387,6 +402,17 @@ const ContactForm = ({ course }) => {
           Submit
         </Button>
       </form>
+        {/* Snackbar for alert messages */}
+        <Snackbar
+        open={snackbarOpen}
+        autoHideDuration={6000}
+        
+        onClose={handleCloseSnackbar}
+      >
+        <Alert onClose={handleCloseSnackbar} severity={snackbarSeverity} sx={{ width: '100%' }}>
+          {snackbarMessage}
+        </Alert>
+      </Snackbar>
     </div>
   )
 }

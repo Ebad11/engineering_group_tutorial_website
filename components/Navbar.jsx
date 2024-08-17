@@ -11,7 +11,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50 || pathname.startsWith('/contact')) {
+      if (window.scrollY > 50 || pathname !=='/') {
         setScrolled(true);
       } else {
         setScrolled(false);
