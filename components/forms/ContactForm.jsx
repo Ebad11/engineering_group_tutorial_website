@@ -99,7 +99,7 @@ const [snackbarSeverity, setSnackbarSeverity] = useState('success');
   };
 
   return (
-    <div className='min-h-[800px] max-xl:min-h-[1000px] container mx-auto w-full flex justify-center'>
+    <div className='min-h-[800px] max-xl:min-h-[1000px] pb-5 container mx-auto w-full flex justify-center'>
       <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col pt-32 w-[80%] gap-8'>
         <div className="font-playfairSC font-bold text-4xl self-center mb-5">Contact Form</div>
         <Controller
